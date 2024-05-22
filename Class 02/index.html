@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="angular.min.js"></script>
+
+    <title>Angular Class 02</title>
+
+    <style>
+        .apni-height {
+            height: 200px !important;
+            width: 280px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-center" ng-app="">
+
+        <h3>Select 1 Province</h3>
+        <select ng-model="province">
+            <option value="1">Sindh</option>
+            <option value="2">Punjab</option>
+            <option value="3">Balochistan</option>
+            <option value="4">KPK</option>
+        </select>
+
+        <hr>
+
+        <div ng-switch="province">
+
+            <div ng-switch-when="1">
+                <h1>SINDH</h1>
+                <div class="d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/karachi.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Karachi</h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/hyd.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Hyderabad</h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/nawabsah.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">NawabShah</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-when="2">
+                <h1>PUNJAB</h1>
+                <div class="d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/islam.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Islamabad</h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/lahore.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Lahore</h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/faisla.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Faislabad</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-when="3">
+                <h1>BALOCHISTAN</h1>
+                <div class="d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/quetta.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Quetta</h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/gawadar.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Gawadar</h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/dera.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Dera Allah Yar</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-when="4">
+                <h1>KPK</h1>
+                <div class="d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/peshawar.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Peshawar</h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/manshera.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Mansehra</h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top apni-height" src="img/sawat.jfif" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-text">Sawat</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-default="">
+                <h2>Please Select Any Province</h2>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

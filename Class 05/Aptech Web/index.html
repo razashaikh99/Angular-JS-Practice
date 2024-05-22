@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <style>
+        .caro_img {
+            height: 570px;
+            width: 100%;
+            border: 2px solid #FDBE10;
+            border-radius: 30px;
+            margin: 10px 0px;
+        }
+
+        .display-flex {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <div ng-include="'navbar.html'"></div>
+
+        <!-- CAROUSEL START -->
+        <div id="carouselExampleInterval" class="carousel slide" data-mdb-ride="carousel" data-mdb-carousel-init>
+            <div class="carousel-inner">
+                <div ng-repeat="a in images">
+                    <div class="carousel-item active" data-mdb-interval="10000">
+                        <img src="{{ a }}" class="d-block w-100 caro_img" alt="Wild Landscape" />
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-mdb-target="#carouselExampleInterval" type="button"
+                data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true">dfdjfh</span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-mdb-target="#carouselExampleInterval" type="button"
+                data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- CAROUSEL END -->
+
+        <br>
+
+        <!-- CARDS START -->
+        <h1 class="text-center display-4 font-weight-bold">COURSES</h1>
+        <div class="display-flex">
+            <div class="card w-25 m-3">
+                <div ng-repeat="image in card_image">
+                    <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                        <img class="w-100 h-100" src="{{ image }}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Short Courses</h5>
+                    <p class="card-text">Short Courses Available on timing 9am to 5pm on Monday , Wednesday And Friday.
+                    </p>
+                    <p class="card-text">Duration: 3 Months</p>
+                    <p class="card-text">Fees: 20,000</p>
+                    <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Apply</a>
+                </div>
+            </div>
+
+            <div class="card w-25 m-3">
+                <div ng-repeat="image in card_image">
+                    <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                        <img class="w-100 h-100" src="{{ image }}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Diploma</h5>
+                    <p class="card-text">Diploma Available on timing 3pm to 9pm on MWF or TTS.
+                    </p> <br>
+                    <p class="card-text">Duration: 3 Years</p>
+                    <p class="card-text">Fees: 290,000</p>
+                    <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+                </div>
+            </div>
+
+            <div class="card w-25 m-3">
+                <div ng-repeat="image in card_image">
+                    <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                        <img class="w-100 h-100" src="{{ image }}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Languages Courses</h5>
+                    <p class="card-text">Languages Courses Available on timing 11am to 5pm on Monday , Wednesday And
+                        Friday.
+                    </p>
+                    <p class="card-text">Duration: 3 Months</p>
+                    <p class="card-text">Fees: 40,000</p>
+                    <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+                </div>
+            </div>
+        </div>
+        <!-- CARDS END -->
+        <br>
+
+        <div ng-include="'footer.html'"></div>
+    </div>
+
+    <!-- MDB -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="controller.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Class 01</title>
+    <script src="angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-app="" ng-init="
+    name = 'Muhammad Raza Shaikh'; 
+    age = '19'; 
+    addreess = 'North Nazimabad, Karachi'; 
+    aptechFees = '7000.00'; 
+    course = ['Advance JavaScript', 'JSON', 'MySQL', 'PHP', 'Laravel']">
+
+        <h1>My Name is: {{ name }}</h1>
+        <h2>My Age is: {{ age }}</h2>
+        <h2>My Address is: {{ addreess }}</h2>
+        <h2>Aptech Fees is: {{ aptechFees }} PKR</h2>
+
+        <ul ng-repeat="abc in course">
+            <li>{{ abc }}</li>
+        </ul>
+    </div>
+
+</body>
+</html>

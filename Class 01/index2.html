@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <script src="angular.min.js"></script>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container" ng-app="" ng-init="">
+
+        <h4>Expense Calculator Task</h4>
+
+        <p>Enter Grocery Expense</p>
+        <input type="number" ng-model="grocery"> 
+
+        <p>Enter Electricity Bill</p>
+        <input type="number" ng-model="elect_bill">
+
+        <p>Enter Gas Bill</p>
+        <input type="number" ng-model="gas_bill">
+
+        <p>Enter Transportation Expense</p>
+        <input type="number" ng-model=" trans_exp">
+
+        <p>Enter Medical Expense</p>
+        <input type="number" ng-model="Med_exp">
+
+        <p>Enter Utility Expense</p>
+        <input type="number" ng-model="Util_exp">
+
+        <h5>Your Total Expense is: {{ grocery + elect_bill + gas_bill + trans_exp + Med_exp + Util_exp }}</h5>
+
+        <hr><hr>
+
+        <h4>Employee Salary Task</h4>
+
+        <p>Enter Your Working Days</p>
+        <input type="number" ng-model="days">
+
+        <h5>Your this month salary is: {{ 2400 * days }}</h5>
+        <h5>Your this month Absents is: {{ 26 - days }}</h5>
+
+        <hr><hr>
+
+        <h4>Electricity Bill Task</h4>
+
+        <p>Enter Your Electricity Units</p>
+        <input type="number" ng-model="elect">
+
+        <h5>Your Electricity Bill is: {{ elect * 20 }}</h5>
+
+        <hr><hr>
+
+        <h4>Gold Price Task</h4>
+
+        <p>Please enter Gold, do you have</p>
+        <input type="number" ng-model="gold">
+
+        <h5>Your Gold Price is: {{ gold * 235500}} PKR</h5>
+
+    </div>
+</body>
+</html>

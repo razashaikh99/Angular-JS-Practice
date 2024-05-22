@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Angular Assignment 01</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" ng-app="" ng-init="">
+
+        <h4>Enter Your Weight:</h4>
+        <input type="number" ng-model="weight">
+
+        <h4>Enter Your Height:</h4>
+        <input type="number" ng-model="height">
+
+        <h4>BMI: {{ weight / height * height }} </h4>
+
+        <hr>
+
+        <h4>Enter Amount:</h4>
+        <input type="number" ng-model="amount">
+
+        <h4>Enter Rate:</h4>
+        <input type="number" ng-model="rate">
+
+        <h4>Enter Time:</h4>
+        <input type="number" ng-model="time">
+
+        <h4>Simple Interest: {{ amount * rate * time / 100}} </h4>
+        
+        <hr>
+
+        <h4>Enter Your Courses in Semester:</h4>
+        <input type="number" ng-model="courses">
+
+        <h4>Your Total Fees is: {{ 18000 * courses }}</h4>
+
+        <hr>
+
+        <h4>Enter Your Velocity:</h4>
+        <input type="number" ng-model="velocity">
+
+        <h4>Enter Your Time:</h4>
+        <input type="number" ng-model="time1">
+
+        <h4>Enter Your Acceleration :</h4>
+        <input type="number" ng-model="acceleration ">
+
+        <!-- <h4>Your Result is: {{ velocity = time1 + acceleration }}</h4> -->
+        <br><br>
+
+    </div>
+
+
+</body>
+
+</html>

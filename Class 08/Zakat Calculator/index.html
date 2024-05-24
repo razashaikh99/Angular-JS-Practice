@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Zakat Calculator</title>
+</head>
+
+<body>
+
+    <div class="container text-center m-4" ng-app="myApp" ng-controller="ctrl_one">
+
+        <h4>Enter your Gold weight in Tola</h4>
+        <input type="number" ng-model="gold"> <br>
+        <br>
+        <h4>Enter your Silver weight in Tola</h4>
+        <input type="number" ng-model="silver"> <br>
+        <br>
+        <h4>Enter your Assets Amount</h4>
+        <input type="number" ng-model="assets"> <br>
+        <br>
+        <button class="btn btn-success w-25" ng-click="zakat()">Your Zakat</button>
+        
+        <table class="table table-bordered border-primary mt-4">
+            <tr>
+                <td>Gold Price:</td>
+                <td>{{ goldPrice }}</td>
+            </tr>
+            <tr>
+                <td>Silver Price:</td>
+                <td>{{ silverPrice }}</td>
+            </tr>
+            <tr>
+                <td>Assets Price:</td>
+                <td>{{ assets }}</td>
+            </tr>
+            <tr>
+                <td>Gold Zakat</td>
+                <td>{{ goldZakat }}</td>
+            </tr>
+            <tr>
+                <td>Silver Zakat</td>
+                <td>{{ silverZakat }}</td>
+            </tr>
+            <tr>
+                <td>Assets Zakat</td>
+                <td>{{ assetsZakat }}</td>
+            </tr>
+        </table>
+
+        <h2>Your Zakat is: {{ totalZakat }}</h2>
+
+    </div>
+
+</body>
+
+</html>

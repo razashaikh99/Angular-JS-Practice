@@ -12,6 +12,7 @@
         }
         table{
             margin: 40px;
+            text-align: center;
         }
     </style>
 </head>
@@ -29,20 +30,20 @@
             <table class="table table-bordered border-info mt-4">
                 <thead>
                     <tr ng-repeat="a in course">
-                        <th>{{ c1 }}</th>
-                        <th>{{ c2 }}</th>
-                        <th>{{ c3 }}</th>
-                        <th>{{ c4 }}</th>
-                        <th>{{ c5 }}</th>
+                        <th><h5>Coures Name: {{ a.c1 }}</h5></th>
+                        <th><h5>Coures Name: {{ a.c2 }}</h5></th>
+                        <th><h5>Coures Name: {{ a.c3 }}</h5></th>
+                        <th><h5>Coures Name: {{ a.c4 }}</h5></th>
+                        <th><h5>Coures Name: {{ a.c5 }}</h5></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>{{  }}</td>
-                        <td>Duration: 6 months</td>
-                        <td>Duration: 8 months</td>
-                        <td>Duration: 14 months</td>
-                        <td>Duration: 10 months</td>
+                    <tr ng-repeat="a in fees">
+                        <th>{{ a.a1 }}</th>
+                        <th>{{ a.b1 }}</th>
+                        <th>{{ a.c1 }}</th>
+                        <th>{{ a.d1 }}</th>
+                        <th>{{ a.e1 }}</th>
                     </tr>
                 </tbody>
             </table>
@@ -58,7 +59,7 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"></script>
     <script src="angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="controller.js"></script>
 
 </body>
 

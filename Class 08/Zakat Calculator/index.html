@@ -9,12 +9,33 @@
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
     <title>Zakat Calculator</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .right-top{
+            width: 100%;
+            height: 50px;
+            text-align: end;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="container text-center m-4" ng-app="myApp" ng-controller="ctrl_one">
+    <div class="text-center m-4" ng-app="myApp" ng-controller="ctrl_one">
 
+        <div class="right-top">
+            <div ng-controller="ctrl_time">
+                <h3>{{ myTime }}</h3>
+            </div>
+        </div>
+        <hr>
+        <div ng-controller="timeOut">
+            <marquee behavior="" direction="left"><h3>{{ message }}</h3></marquee> 
+            <marquee behavior="" direction="right"><h3>{{ message2 }}</h3></marquee> 
+        </div>
+        <hr>
         <h4>Enter your Gold weight in Tola</h4>
         <input type="number" ng-model="gold"> <br>
         <br>
@@ -24,7 +45,7 @@
         <h4>Enter your Assets Amount</h4>
         <input type="number" ng-model="assets"> <br>
         <br>
-        <button class="btn btn-success w-25" ng-click="zakat()">Your Zakat</button>
+        <button class="btn btn-primary w-25" ng-click="zakat()">Your Zakat</button>
         
         <table class="table table-bordered border-primary mt-4">
             <tr>
@@ -54,6 +75,8 @@
         </table>
 
         <h2>Your Zakat is: {{ totalZakat }}</h2>
+
+        
 
     </div>
 

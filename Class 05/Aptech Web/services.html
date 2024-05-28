@@ -48,6 +48,87 @@
                 </tbody>
             </table>
         </div>
+
+
+        <h1 class="mt-4 text-center">Select Short Course</h1>
+
+        <select ng-model="course" class="center-div">
+            <option value="1">Office Automation</option>
+            <option value="2">Web Designing </option>
+            <option value="3">Web Development</option>
+        </select>
+
+        <div class="center-div" ng-switch="course">
+
+            <div ng-switch-when="1">
+                <div class="card w-50 m-3">
+                    <div ng-repeat="image in card_image">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img class="w-100 h-100" src="{{ image }}" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Office Automation</h5>
+                        <p class="card-text">Office Automation Available on timing 9am to 5pm on Monday , Wednesday And Friday.
+                        </p>
+                        <p class="card-text">Duration: 3 Months</p>
+                        <p class="card-text">Fees: 22,000</p>
+                        <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-when="2">
+                <div class="card w-25 m-3">
+                    <div ng-repeat="image in card_image">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img class="w-100 h-100" src="{{ image }}" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Web Designing</h5>
+                        <p class="card-text">Web Designing Course Available on timing 9am to 5pm on Monday , Wednesday And Friday.
+                        </p>
+                        <p class="card-text">Duration: 4 Months</p>
+                        <p class="card-text">Fees: 30,000</p>
+                        <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-when="3">
+                <div class="card w-25 m-3">
+                    <div ng-repeat="image in card_image">
+                        <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img class="w-100 h-100" src="{{ image }}" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Web Development Courses Available on timing 9am to 5pm on Monday , Wednesday And Friday.
+                        </p>
+                        <p class="card-text">Duration: 6 Months</p>
+                        <p class="card-text">Fees: 40,000</p>
+                        <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-default="">
+                <h2>Please Select any 1 Course</h2>
+            </div>
+
+        </div>
+
         
         
 

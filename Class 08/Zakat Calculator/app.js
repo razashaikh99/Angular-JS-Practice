@@ -1,5 +1,13 @@
 var zakat = angular.module("myApp", [])
 
+zakat.controller("ctrl_time" , function($scope , $interval){
+    $scope.myTime = new Date().toLocaleTimeString();
+
+    $interval(function(){
+        $scope.myTime = new Date().toLocaleTimeString();
+    }, 100);
+});
+
 zakat.controller("ctrl_one", function($scope){
 
     $scope.zakat = function(){
@@ -30,4 +38,16 @@ zakat.controller("ctrl_one", function($scope){
         $scope.totalZakat = $scope.goldZakat + $scope.silverZakat + $scope.assetsZakat
     }
 
-})
+});
+
+zakat.controller("timeOut" , function($scope , $timeout){
+        $scope.message = "Gold Rate";
+        $timeout(function(){
+            $scope.message = "Today Gold Rate is 240,500";
+        } , 5000);
+        $scope.message2 = "Silver Rate";
+        $timeout(function(){
+            $scope.message2 = "Today Gold Rate is 3,270";
+        } , 5000);
+});
+
